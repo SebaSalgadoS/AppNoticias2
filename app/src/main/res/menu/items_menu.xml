@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navHome"
+        android:title="Home"
+        android:icon="@drawable/ic_home" />
+    <item
+        android:title="Configuraciones"
+        android:icon="@drawable/ic_config"
+        />
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navCategoria"
+            android:title="Categorias"
+            android:icon="@drawable/ic_folder" />
+
+    </group>
+    <item
+        android:id="@+id/navIdioma"
+        android:title="Idioma"
+        android:icon="@drawable/ic_baseline_language_24"/>
+
+    <item
+        android:id="@+id/navSalir"
+        android:title="Cerrar Sesion"
+        android:icon="@drawable/ic_exit"/>
+
+</menu>
