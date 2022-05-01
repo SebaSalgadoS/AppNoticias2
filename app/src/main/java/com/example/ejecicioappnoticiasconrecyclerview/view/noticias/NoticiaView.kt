@@ -1,15 +1,12 @@
-package com.example.ejecicioappnoticiasconrecyclerview.view
+package com.example.ejecicioappnoticiasconrecyclerview.view.noticias
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.example.ejecicioappnoticiasconrecyclerview.R
-import com.example.ejecicioappnoticiasconrecyclerview.databinding.ActivityMainBinding
 import com.example.ejecicioappnoticiasconrecyclerview.databinding.ActivityNoticiaViewBinding
-import com.example.ejecicioappnoticiasconrecyclerview.repository.retrofit.Article
+import com.example.ejecicioappnoticiasconrecyclerview.repository.retrofit.Data
 import com.google.gson.Gson
-import okhttp3.HttpUrl.Companion.toHttpUrl
-import okhttp3.internal.notifyAll
 
 class NoticiaView : AppCompatActivity() {
     lateinit var binding: ActivityNoticiaViewBinding
@@ -20,17 +17,17 @@ class NoticiaView : AppCompatActivity() {
 
         val texto = intent.extras?.getString("data")
 
-        val noticia: Article = Gson().fromJson(texto, Article::class.java)
+        val noticia: Data = Gson().fromJson(texto, Data::class.java)
 
         binding.txtTitular.text = noticia.title
         binding.txtDescripcion.text = noticia.description
         binding.txtAutor.text = "Autor: " + noticia.author
-        binding.txtFecha.text = noticia.publishedAt
+        binding.txtFecha.text = noticia.published_at
         binding.txtFuente.text = " Fuente: " + noticia.url
 
 
         Glide.with(applicationContext)
-            .load(noticia.urlToImage)
+            .load(noticia.image)
             .error(R.drawable.sin_imagen)
             .into(binding.appImage);
 

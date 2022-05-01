@@ -1,15 +1,18 @@
-package com.example.ejecicioappnoticiasconrecyclerview.view
+package com.example.ejecicioappnoticiasconrecyclerview.view.noticias
 
+import android.content.Intent
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
-import com.example.ejecicioappnoticiasconrecyclerview.FragHomeNoticias
-import com.example.ejecicioappnoticiasconrecyclerview.R
+import com.example.ejecicioappnoticiasconrecyclerview.*
 import com.example.ejecicioappnoticiasconrecyclerview.databinding.ActivityMainBinding
+import com.example.ejecicioappnoticiasconrecyclerview.view.fragnoticias.*
+import com.example.ejecicioappnoticiasconrecyclerview.view.usuario.Login
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener  {
@@ -30,8 +33,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         myToolbar = findViewById(R.id.myToolbar)
 
-        setSupportActionBar(myToolbar)
+        supportFragmentManager.beginTransaction().add(R.id.myFrame, FragHomeNoticias()).commit()
 
+        setSupportActionBar(myToolbar)
 
 
         toogle = setDrawerToogle()
@@ -66,9 +70,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val ft = fm.beginTransaction()
         when (item.itemId) {
             R.id.navHome -> ft.replace(R.id.myFrame, FragHomeNoticias()).commit()
-            R.id.navCategoria ->  Toast.makeText(applicationContext,"Categorias", Toast.LENGTH_SHORT).show()
+            R.id.navDeportes -> ft.replace(R.id.myFrame, FragDeportes()).commit()
+            R.id.navCiencias -> ft.replace(R.id.myFrame, FragCiencia()).commit()
+            R.id.navNegocios -> ft.replace(R.id.myFrame, FragNegocios()).commit()
+            R.id.navTecnologia -> ft.replace(R.id.myFrame, FragTecnologia()).commit()
+            R.id.navSalud -> ft.replace(R.id.myFrame, FragSalud()).commit()
+            R.id.navEntretenimiento -> ft.replace(R.id.myFrame, FragEntretenimiento()).commit()
             R.id.navIdioma ->  Toast.makeText(applicationContext,"Idioma", Toast.LENGTH_SHORT).show()
-            R.id.navSalir -> Toast.makeText(applicationContext,"Salir", Toast.LENGTH_SHORT).show()
+            R.id.navSalir -> {
+                val intent = Intent(this, Login::class.java)
+                startActivity(intent)
+            }
+
         }
 
 
@@ -77,5 +90,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         return true
     }
+
 }
 

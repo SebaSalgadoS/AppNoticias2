@@ -9,21 +9,28 @@
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/activity_categorias.xml" value="0.36615384615384616" />
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/activity_home_noticias.xml" value="0.30423940149625933" />
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/activity_idiomas.xml" value="0.3578125" />
-        <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/activity_login.xml" value="0.371875" />
+        <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/activity_login.xml" value="0.35435897435897434" />
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/activity_main.xml" value="0.3160621761658031" />
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/activity_navigation_drawer_view.xml" value="0.30423940149625933" />
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/activity_noticia_view.xml" value="0.371875" />
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/activity_registro.xml" value="0.36615384615384616" />
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/drawer_layout.xml" value="0.371875" />
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/fragment_frag_categorias_view.xml" value="0.36615384615384616" />
+        <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/fragment_frag_ciencia.xml" value="0.371875" />
+        <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/fragment_frag_deportes.xml" value="0.371875" />
+        <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/fragment_frag_entretenimiento.xml" value="0.371875" />
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/fragment_frag_home_noticias.xml" value="0.36615384615384616" />
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/fragment_frag_idiomas_view.xml" value="0.371875" />
-        <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/items_recycler.xml" value="0.2175925925925926" />
+        <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/fragment_frag_negocios.xml" value="0.371875" />
+        <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/fragment_frag_salud.xml" value="0.371875" />
+        <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/fragment_frag_tecnologia.xml" value="0.371875" />
+        <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/items_recycler.xml" value="0.36615384615384616" />
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/nav_header.xml" value="0.371875" />
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/navigation_drawer.xml" value="0.36615384615384616" />
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/layout/toolbar.xml" value="0.36615384615384616" />
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/menu/items_menu.xml" value="0.36615384615384616" />
         <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/menu/items_navigation_bottom.xml" value="0.36615384615384616" />
+        <entry key="..\:/Users/Nordon/AndroidStudioProjects/EjecicioAppNoticiasConRecyclerView/app/src/main/res/menu/menu_config.xml" value="0.36615384615384616" />
       </map>
     </option>
   </component>

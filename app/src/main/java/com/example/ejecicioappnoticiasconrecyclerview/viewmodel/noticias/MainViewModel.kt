@@ -1,4 +1,4 @@
-package com.example.ejecicioappnoticiasconrecyclerview.viewmodel
+package com.example.ejecicioappnoticiasconrecyclerview.viewmodel.noticias
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

@@ -13,28 +13,17 @@
         android:theme="@style/Theme.EjecicioAppNoticiasConRecyclerView"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".NavigationDrawerView"
-            android:exported="false" />
-        <activity
-            android:name=".HomeNoticias"
-            android:exported="false" />
-        <activity
             android:name=".view.usuario.Registro"
             android:exported="false" />
         <activity
+            android:name=".view.noticias.MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".view.noticias.NoticiaView"
+            android:exported="false" />
+        <activity
             android:name=".view.usuario.Login"
-            android:exported="false" />
-        <activity
-            android:name=".Idiomas"
-            android:exported="false" />
-        <activity
-            android:name=".Categorias"
-            android:exported="false" />
-        <activity
-            android:name=".view.NoticiaView"
-            android:exported="false" />
-        <activity
-            android:name=".view.MainActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>

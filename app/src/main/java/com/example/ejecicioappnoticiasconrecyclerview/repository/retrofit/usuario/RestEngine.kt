@@ -5,18 +5,17 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class RestEngineUsuario {
+class RestEngine {
 
         companion object{
 
-            fun getRestEngineUsuario(): Retrofit {
+            fun getRestEngine(): Retrofit {
                 val interceptor = HttpLoggingInterceptor()
                 interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
 
                 val cliente = OkHttpClient.Builder().addInterceptor(interceptor).build()
 
-                val retrofit = Retrofit.Builder().baseUrl("https://login-usuario-noticias-default-rtdb.firebaseio.com/" +
-                        "\n")
+                val retrofit = Retrofit.Builder().baseUrl("https://login-usuario-noticias-default-rtdb.firebaseio.com/")
                     .addConverterFactory(GsonConverterFactory.create()).client(cliente).build()
 
                 return  retrofit

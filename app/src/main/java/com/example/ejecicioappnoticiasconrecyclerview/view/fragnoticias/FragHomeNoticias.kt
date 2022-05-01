@@ -1,4 +1,4 @@
-package com.example.ejecicioappnoticiasconrecyclerview
+package com.example.ejecicioappnoticiasconrecyclerview.view.fragnoticias
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,8 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ejecicioappnoticiasconrecyclerview.databinding.FragmentFragHomeNoticiasBinding
 import com.example.ejecicioappnoticiasconrecyclerview.repository.recyclerview.Adaptador
-import com.example.ejecicioappnoticiasconrecyclerview.view.MainActivity
-import com.example.ejecicioappnoticiasconrecyclerview.viewmodel.MainViewModel
+import com.example.ejecicioappnoticiasconrecyclerview.viewmodel.noticias.MainViewModel
 
 class FragHomeNoticias : Fragment() {
 
@@ -37,6 +36,14 @@ class FragHomeNoticias : Fragment() {
         myRecyclerView1.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
+        homeViewModel.onBtnMostrarNoticias()
+
+        binding.btnMostrarNoticia.setOnClickListener {
+            binding.progressBar.visibility = View.VISIBLE
+            homeViewModel.onBtnMostrarNoticias()
+        }
+
+
         return binding.root
     }
 
@@ -45,8 +52,7 @@ class FragHomeNoticias : Fragment() {
             binding.progressBar.visibility = View.GONE
             //binding.txtJson.text = "Noticias: \n"
             //binding.txtJson.append("${Gson().toJson(it)}")
-            binding.progressBar.visibility = View.GONE
-            adaptador = Adaptador(requireContext(), it.articles, MainActivity())
+            adaptador = Adaptador(requireContext().applicationContext, it.data)
             myRecyclerView1.adapter = adaptador
 
         })

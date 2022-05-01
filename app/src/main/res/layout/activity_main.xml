@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/myDrawerLayout2"
-    tools:context=".view.MainActivity"
+    tools:context=".view.noticias.MainActivity"
     tools:openDrawer="start" >
 
     <LinearLayout
@@ -28,6 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:isScrollContainer="true"
         app:menu="@menu/items_menu"
         app:headerLayout="@layout/nav_header"/>
 </androidx.drawerlayout.widget.DrawerLayout>

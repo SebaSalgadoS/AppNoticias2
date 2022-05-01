@@ -1,18 +1,15 @@
 package com.example.ejecicioappnoticiasconrecyclerview.view.usuario
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.ejecicioappnoticiasconrecyclerview.R
 import com.example.ejecicioappnoticiasconrecyclerview.databinding.ActivityLoginBinding
-import com.example.ejecicioappnoticiasconrecyclerview.viewmodel.LoginViewModel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import com.example.ejecicioappnoticiasconrecyclerview.view.noticias.MainActivity
+import com.example.ejecicioappnoticiasconrecyclerview.viewmodel.usuarios.LoginViewModel
 
 class Login : AppCompatActivity() {
 
@@ -38,16 +35,22 @@ class Login : AppCompatActivity() {
 
         }
 
+        binding.btnRegistrar.setOnClickListener {
+            val intent = Intent(applicationContext, Registro::class.java)
+            startActivity(intent)
+        }
+
 
     }
 
     private fun observar() {
         loginViewModel.usuarios.observe(this, Observer {
             binding.progressBar2.visibility = View.GONE
-            if (loginViewModel.usuarios != null){
-                Toast.makeText(applicationContext,"funciona",Toast.LENGTH_SHORT).show()
+            if (it != null){
+                val intent = Intent(applicationContext, MainActivity::class.java)
+                startActivity(intent)
             }else{
-                Toast.makeText(applicationContext,"no funciona",Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext,"Usuario no Registrado",Toast.LENGTH_SHORT).show()
             }
         })
 

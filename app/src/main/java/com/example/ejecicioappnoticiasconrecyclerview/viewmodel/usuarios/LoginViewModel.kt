@@ -1,4 +1,4 @@
-package com.example.ejecicioappnoticiasconrecyclerview.viewmodel
+package com.example.ejecicioappnoticiasconrecyclerview.viewmodel.usuarios
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,7 +12,6 @@ class LoginViewModel: ViewModel() {
 
     var usuarios: MutableLiveData<Usuario> = MutableLiveData()
     private val interactorUsuario = LoginUsuarioInteractor()
-
 
 
     fun onBtnValidarUsuario(usuario: String, pass: String){

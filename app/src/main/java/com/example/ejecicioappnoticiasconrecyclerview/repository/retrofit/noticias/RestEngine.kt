@@ -13,7 +13,7 @@ class RestEngine {
             val interceptor = HttpLoggingInterceptor()
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
             val cliente = OkHttpClient.Builder().addInterceptor(interceptor).build()
-            val retrofit = Retrofit.Builder().baseUrl("https://newsapi.org/v2/")
+            val retrofit = Retrofit.Builder().baseUrl("http://api.mediastack.com/v1/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(cliente).build()
 
