@@ -9,7 +9,7 @@ import retrofit2.http.Query
 interface NoticiasAPIService {
 
 
-    @GET("news?access_key=e4197edbe84b087bbb0090977bb6339a&countries=cl")
+    @GET("news?access_key=e4197edbe84b087bbb0090977bb6339a")
     fun obtenerNoticias(@Query("languages") languages: String): Call<Noticias>
 
 

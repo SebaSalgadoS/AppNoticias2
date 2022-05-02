@@ -13,9 +13,9 @@ class MainViewModel: ViewModel(){
     val noticias: MutableLiveData<Noticias> = MutableLiveData()
     private val interactor = NoticiasInteractor()
 
-    fun onBtnMostrarNoticias(){
+    fun onBtnMostrarNoticias(languages: String){
         CoroutineScope(Dispatchers.IO).launch {
-            noticias.postValue(interactor.traerRespuesta("es"))
+            noticias.postValue(interactor.traerRespuesta(languages))
         }
     }
 

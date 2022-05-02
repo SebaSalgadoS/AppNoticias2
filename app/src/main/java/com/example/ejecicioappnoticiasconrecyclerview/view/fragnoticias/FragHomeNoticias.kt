@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
+import androidx.fragment.app.FragmentResultListener
+import androidx.fragment.app.setFragmentResult
+import androidx.fragment.app.setFragmentResultListener
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,6 +25,8 @@ class FragHomeNoticias : Fragment() {
     private lateinit var myRecyclerView1: RecyclerView
     private lateinit var adaptador: Adaptador
 
+    lateinit var idioma:String
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,18 +35,29 @@ class FragHomeNoticias : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentFragHomeNoticiasBinding.inflate(layoutInflater)
 
+        var bundle: Bundle? = arguments
+        if(bundle != null){
+            idioma = bundle!!.getString("idioma", "es")
+        }
+        else{
+            idioma = "es"
+        }
+
+
         homeViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         observar()
+
+
 
         myRecyclerView1 = binding.myRecyclerView
         myRecyclerView1.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
-        homeViewModel.onBtnMostrarNoticias()
+        homeViewModel.onBtnMostrarNoticias(idioma)
 
         binding.btnMostrarNoticia.setOnClickListener {
             binding.progressBar.visibility = View.VISIBLE
-            homeViewModel.onBtnMostrarNoticias()
+            homeViewModel.onBtnMostrarNoticias(idioma)
         }
 
         binding.btnBuscarNoticia.setOnClickListener {
@@ -48,9 +65,15 @@ class FragHomeNoticias : Fragment() {
             homeViewModel.onBtnTraerKeywords(binding.textView.text.toString())
         }
 
+
+
+
+
         
         return binding.root
     }
+
+
 
     private fun observar() {
         homeViewModel.noticias.observe(viewLifecycleOwner, Observer {
@@ -62,5 +85,7 @@ class FragHomeNoticias : Fragment() {
 
         })
     }
+
+
 
 }

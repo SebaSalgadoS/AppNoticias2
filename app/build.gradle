@@ -81,4 +81,13 @@ dependencies {
     // Also declare the dependency for the Google Play services library and specify its version
     implementation 'com.google.android.gms:play-services-auth:20.1.0'
 
+    // DEPENDENCIAS PARA PASAR INFORMACION DE UN FRAGMENTO A OTRO
+
+
+    // Java language implementation
+    implementation("androidx.fragment:fragment:1.4.1")
+    // Kotlin
+    implementation("androidx.fragment:fragment-ktx:1.4.1")
+    // Testing Fragments in Isolation
+    debugImplementation("androidx.fragment:fragment-testing:1.4.1")
 }

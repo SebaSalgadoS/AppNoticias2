@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.navTecnologia -> ft.replace(R.id.myFrame, FragTecnologia()).commit()
             R.id.navSalud -> ft.replace(R.id.myFrame, FragSalud()).commit()
             R.id.navEntretenimiento -> ft.replace(R.id.myFrame, FragEntretenimiento()).commit()
-            R.id.navIdioma ->  Toast.makeText(applicationContext,"Idioma", Toast.LENGTH_SHORT).show()
+            R.id.navIdioma ->  ft.replace(R.id.myFrame, FragIdiomasView()).commit()
             R.id.navSalir -> {
                 val intent = Intent(this, Login::class.java)
                 startActivity(intent)
