@@ -10,11 +10,11 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.ejecicioappnoticiasconrecyclerview.R
 import com.example.ejecicioappnoticiasconrecyclerview.databinding.ActivityRegistroBinding
 import com.example.ejecicioappnoticiasconrecyclerview.repository.retrofit.usuario.UsuarioItem
-import com.example.ejecicioappnoticiasconrecyclerview.view.noticias.MainActivity
 import com.example.ejecicioappnoticiasconrecyclerview.viewmodel.usuarios.RegistroViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import retrofit2.Call
 
 class Registro : AppCompatActivity() {
 
@@ -50,7 +50,8 @@ class Registro : AppCompatActivity() {
                 val intent = Intent(applicationContext, Login::class.java)
                 startActivity(intent)
                 Toast.makeText(applicationContext,"Usuario Agregado", Toast.LENGTH_SHORT).show()
-            }else{
+            }
+            else{
                 Toast.makeText(applicationContext,"No se pudo Registrar el Usuario", Toast.LENGTH_SHORT).show()
             }
         })

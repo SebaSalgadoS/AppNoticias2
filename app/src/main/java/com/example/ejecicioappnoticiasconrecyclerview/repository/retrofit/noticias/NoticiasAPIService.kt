@@ -15,4 +15,7 @@ interface NoticiasAPIService {
 
     @GET("news?languages=es&access_key=e4197edbe84b087bbb0090977bb6339a")
     fun obtenerNoticiasDeporte(@Query("categories") categoria: String): Call<Noticias>
+
+    @GET("news?access_key=e4197edbe84b087bbb0090977bb6339a&countries=cl")
+    fun buscarPalabraClave(@Query("keywords") keywords: String): Call<Noticias>
 }

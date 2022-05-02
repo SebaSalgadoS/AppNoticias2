@@ -10,7 +10,7 @@ import kotlinx.coroutines.*
 class RegistroViewModel: ViewModel() {
 
 
-    var usuarios : MutableLiveData<Int> = MutableLiveData()
+    var usuarios: MutableLiveData<Int> = MutableLiveData()
     private val registroInteractor = RegistroUsuarioInteractor()
 
     fun onBtnValidarUsuarioRegistro(usuarioItem: UsuarioItem){

@@ -19,4 +19,10 @@ class MainViewModel: ViewModel(){
         }
     }
 
+    fun onBtnTraerKeywords(keywords: String){
+        CoroutineScope(Dispatchers.IO).launch {
+            noticias.postValue(interactor.traerKeywords(keywords))
+        }
+    }
+
 }

@@ -16,14 +16,14 @@
             android:name=".view.usuario.Registro"
             android:exported="false" />
         <activity
-            android:name=".view.noticias.MainActivity"
+            android:name=".view.usuario.Login"
             android:exported="false" />
 
         <activity
             android:name=".view.noticias.NoticiaView"
             android:exported="false" />
         <activity
-            android:name=".view.usuario.Login"
+            android:name=".view.noticias.MainActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>

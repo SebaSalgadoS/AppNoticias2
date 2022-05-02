@@ -43,7 +43,12 @@ class FragHomeNoticias : Fragment() {
             homeViewModel.onBtnMostrarNoticias()
         }
 
+        binding.btnBuscarNoticia.setOnClickListener {
+            binding.progressBar.visibility = View.VISIBLE
+            homeViewModel.onBtnTraerKeywords(binding.textView.text.toString())
+        }
 
+        
         return binding.root
     }
 

@@ -1,5 +1,6 @@
 package com.example.ejecicioappnoticiasconrecyclerview.view.noticias
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
@@ -19,17 +20,17 @@ class NoticiaView : AppCompatActivity() {
 
         val noticia: Data = Gson().fromJson(texto, Data::class.java)
 
-        binding.txtTitular.text = noticia.title
-        binding.txtDescripcion.text = noticia.description
-        binding.txtAutor.text = "Autor: " + noticia.author
-        binding.txtFecha.text = noticia.published_at
-        binding.txtFuente.text = " Fuente: " + noticia.url
+        binding.myWebView.loadUrl(noticia.url)
+
+        binding.shareBtn.setOnClickListener {
+            val intent= Intent()
+            intent.action=Intent.ACTION_SEND
+            intent.putExtra(Intent.EXTRA_TEXT,"Mira esta Noticia: "+ noticia.url)
+            intent.type="text/plain"
+            startActivity(Intent.createChooser(intent,"Compartir Noticia a: "))
+        }
 
 
-        Glide.with(applicationContext)
-            .load(noticia.image)
-            .error(R.drawable.sin_imagen)
-            .into(binding.appImage);
 
     }
 }

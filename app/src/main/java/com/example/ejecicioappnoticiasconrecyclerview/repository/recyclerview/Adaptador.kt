@@ -45,12 +45,17 @@ class Adaptador (var context: Context, var listaNoticias: List<Data>): RecyclerV
             context.startActivity(intent)
         }
 
-      /*  holder.btnshare.setOnClickListener {
-            var intent = Intent().apply {
-                action = Intent.ACTION_SEND
-
-            }
-        }*/
+        //BOTON DE COMPARTIR NOTICIA
+        /*
+        holder.btnshare.setOnClickListener {
+            var detalle = Html.fromHtml(listaNoticias[holder.layoutPosition].url)
+            var intent = Intent()
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            intent.action = Intent.ACTION_SEND
+            intent.putExtra("data", detalle)
+            intent.type="text/plain"
+            context.startActivity(Intent.createChooser(intent, null))
+        } */
 
     }
 
@@ -65,7 +70,8 @@ class Adaptador (var context: Context, var listaNoticias: List<Data>): RecyclerV
         var imagen: ImageView
         var titulo: TextView
         var descripcion: TextView
-        //var btnshare: Button
+        //BOTON DE COMPARTIR NOTICIA
+       // var btnshare: Button
 
         //contexto
         var con: Context
@@ -76,7 +82,7 @@ class Adaptador (var context: Context, var listaNoticias: List<Data>): RecyclerV
             descripcion = itemView.findViewById(R.id.txtMenuDescripcion)
             con = context
 
-           // btnshare = itemView.findViewById(R.id.btnShare)
+           //btnshare = itemView.findViewById(R.id.btnShare)
         }
     }
 

@@ -14,4 +14,12 @@ class NoticiasInteractor {
 
         return p
     }
+
+    fun traerKeywords(keyword: String):Noticias?{
+        val llamada: NoticiasAPIService = RestEngine.getRestEngine().create(NoticiasAPIService::class.java)
+        val resultado: Call<Noticias> = llamada.buscarPalabraClave(keyword)
+        val p: Noticias? = resultado.execute().body()
+
+        return p
+    }
 }
