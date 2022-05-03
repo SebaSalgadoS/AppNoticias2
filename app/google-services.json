@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "99578058905",
+    "firebase_url": "https://login-usuario-noticias-default-rtdb.firebaseio.com",
+    "project_id": "login-usuario-noticias",
+    "storage_bucket": "login-usuario-noticias.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99578058905:android:56e263e6a36d5d05ab4008",
+        "android_client_info": {
+          "package_name": "com.example.ejecicioappnoticiasconrecyclerview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99578058905-2nks1kcg2s7c7qqgu0bfmi5p2me0cuat.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBietYYaMwCLy8kYDVqrtJ8j7m_dx9YyaI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99578058905-2nks1kcg2s7c7qqgu0bfmi5p2me0cuat.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
