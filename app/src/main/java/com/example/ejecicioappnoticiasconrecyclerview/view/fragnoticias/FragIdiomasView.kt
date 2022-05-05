@@ -1,8 +1,8 @@
 package com.example.ejecicioappnoticiasconrecyclerview.view.fragnoticias
 
+import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.preference.PreferenceManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,6 +18,9 @@ class FragIdiomasView : Fragment() {
 
     lateinit var binding: FragmentFragIdiomasViewBinding
 
+    val CHEXBOX_IDIOMA = "checkIdioma"
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +29,10 @@ class FragIdiomasView : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentFragIdiomasViewBinding.inflate(layoutInflater)
 
+        var preferences: SharedPreferences =
+            requireContext().getSharedPreferences(CHEXBOX_IDIOMA, Context.MODE_PRIVATE)
+
+
 
         binding.btnIdioma.setOnClickListener {
 
@@ -33,6 +40,7 @@ class FragIdiomasView : Fragment() {
             var bundle = Bundle()
             bundle.putString("idioma",escogerIdioma())
 
+            //FRAGMENTO HOME NOTICIAS
             val fragment = FragHomeNoticias()
             fragment.arguments = bundle
             val fm: FragmentManager = requireActivity().supportFragmentManager
@@ -50,20 +58,22 @@ class FragIdiomasView : Fragment() {
         var idioma = ""
         if(binding.checkSpanish.isChecked){
             idioma = "es"
+
         }
         if (binding.checkIngles.isChecked){
             idioma = "en"
+
         }
         if (binding.checkIt.isChecked){
             idioma = "it"
+
         }
         if (binding.checkRuso.isChecked){
             idioma = "ru"
+
         }
         return idioma
 
     }
-
-
 
 }

@@ -13,9 +13,9 @@ class CategoriasViewModel: ViewModel() {
     val noticias: MutableLiveData<Noticias> = MutableLiveData()
     private val interactor = NoticiaCategoriasInteractor()
 
-    fun onBtnMostrarCategoria(categoria: String){
+    fun onBtnMostrarCategoria(categoria: String, language: String){
         CoroutineScope(Dispatchers.IO).launch {
-            noticias.postValue(interactor.traerNoticiasDeporte(categoria))
+            noticias.postValue(interactor.traerNoticiasDeporte(categoria, language))
         }
     }
 

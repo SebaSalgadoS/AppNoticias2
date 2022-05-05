@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
@@ -14,6 +16,9 @@ import com.example.ejecicioappnoticiasconrecyclerview.databinding.ActivityMainBi
 import com.example.ejecicioappnoticiasconrecyclerview.view.fragnoticias.*
 import com.example.ejecicioappnoticiasconrecyclerview.view.usuario.Login
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener  {
 
@@ -22,12 +27,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var toogle: ActionBarDrawerToggle
     lateinit var myToolbar: Toolbar
 
+    private lateinit var analytics: FirebaseAnalytics
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_EjecicioAppNoticiasConRecyclerView)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Obtain the FirebaseAnalytics instance.
+        analytics = Firebase.analytics
 
         binding.myNavigationView2.setNavigationItemSelectedListener(this)
 

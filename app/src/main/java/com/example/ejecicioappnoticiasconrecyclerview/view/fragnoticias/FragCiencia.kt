@@ -23,12 +23,15 @@ class FragCiencia : Fragment() {
     private lateinit var myRecyclerViewCiencia: RecyclerView
     private lateinit var adaptador: Adaptador
 
+    lateinit var idioma: String
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentFragCienciaBinding.inflate(layoutInflater)
+
 
         categoriasViewModel = ViewModelProvider(this).get(CategoriasViewModel::class.java)
         observar()
@@ -37,11 +40,11 @@ class FragCiencia : Fragment() {
         myRecyclerViewCiencia.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
-        categoriasViewModel.onBtnMostrarCategoria("science")
+        categoriasViewModel.onBtnMostrarCategoria("science",idioma)
 
         binding.btnmostrarCiencia.setOnClickListener {
             binding.progressBarCiencia.visibility = View.VISIBLE
-            categoriasViewModel.onBtnMostrarCategoria("science")
+            categoriasViewModel.onBtnMostrarCategoria("science",idioma)
         }
 
         return binding.root

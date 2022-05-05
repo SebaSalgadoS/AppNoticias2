@@ -43,11 +43,8 @@ class FragHomeNoticias : Fragment() {
             idioma = "es"
         }
 
-
         homeViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         observar()
-
-
 
         myRecyclerView1 = binding.myRecyclerView
         myRecyclerView1.layoutManager =
@@ -66,14 +63,8 @@ class FragHomeNoticias : Fragment() {
         }
 
 
-
-
-
-        
         return binding.root
     }
-
-
 
     private fun observar() {
         homeViewModel.noticias.observe(viewLifecycleOwner, Observer {
